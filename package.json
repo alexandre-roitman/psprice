@@ -1,0 +1,25 @@
+{
+  "name": "psprice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandre-roitman/psprice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandre-roitman/psprice/issues"
+  },
+  "homepage": "https://github.com/alexandre-roitman/psprice#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "lodash": "^4.15.0",
+    "request": "^2.74.0"
+  }
+}
