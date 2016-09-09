@@ -1,38 +1,44 @@
 'use strict';
 
-let priceChecker = require('./priceCheck');
+// let priceChecker = require('./priceCheck');
 
-var watched = [
-  {
-    cid: 'UP0006-CUSA04027_00-TITANFALL2RSPWN1'
-  },
-  {
-    cid: 'UP0471-CUSA04046_00-0000000000000ABC'
-  },
-  {
-    cid: 'UP0082-CUSA05794_00-ROTTR00000000001'
-  },
-  {
-    cid: 'UP0082-CUSA04647_00-WORLDOFFFPS40000'
-  }
-];
+// var watched = [
+//   {
+//     cid: 'UP0006-CUSA04027_00-TITANFALL2RSPWN1'
+//   },
+//   {
+//     cid: 'UP0471-CUSA04046_00-0000000000000ABC'
+//   },
+//   {
+//     cid: 'UP0082-CUSA05794_00-ROTTR00000000001'
+//   },
+//   {
+//     cid: 'UP0082-CUSA04647_00-WORLDOFFFPS40000'
+//   }
+// ];
 
-watched.forEach((game) => {
-  priceChecker.getPrice(game.cid).then(printGameData);
+// watched.forEach((game) => {
+//   priceChecker.getPrice(game.cid).then(printGameData);
+// });
+
+// let search = require('./search');
+// search('unc').then(results => console.log(results)).then(process.exit());
+
+let getWatchers = require('./getWatchers');
+
+getWatchers().then((data) => {
+  console.log(data);
 });
 
-let search = require('./search');
-// search('unc');
-
-function printGameData(gameData) {
-  console.log(gameData.name);
-  if (gameData.hasDiscount) {
-    console.log('*** has discount ***');
-    console.log('Discounted Price:', gameData.discountedPrice);
-  }
-  console.log('Price:', gameData.price);
-  console.log('-----------------------------------');
-}
+// function printGameData(gameData) {
+//   console.log(gameData.name);
+//   if (gameData.hasDiscount) {
+//     console.log('*** has discount ***');
+//     console.log('Discounted Price:', gameData.discountedPrice);
+//   }
+//   console.log('Price:', gameData.price);
+//   console.log('-----------------------------------');
+// }
 
 
 

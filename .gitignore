@@ -3,4 +3,7 @@ node_modules/
 *.xml
 *.iml
 
+./config.js
+./psdb.json
+
 public/bundle.js
