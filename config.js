@@ -1,4 +1,5 @@
 module.exports = {
+    interval: 300000,
     firebase: {
         serviceAccount: {
             projectId: "ps-price",
