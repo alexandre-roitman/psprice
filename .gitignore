@@ -2,6 +2,7 @@ node_modules/
 .vscode/
 *.xml
 *.iml
+npm-debug.log
 
 ./config.js
 ./psdb.json
