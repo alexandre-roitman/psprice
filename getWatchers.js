@@ -1,10 +1,10 @@
 'use strict';
 
-const firebaseDB = require('./firebaseDB');
+const firebase = require('./firebaseFacade');
 
 module.exports = () => {
     return new Promise((resolve) => {
-        firebaseDB.ref('usersData').once('value').then(snapshot => {
+        firebase.database().ref('usersData').once('value').then(snapshot => {
             resolve(snapshot.val());
         });
     });
