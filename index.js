@@ -6,6 +6,7 @@ const port = process.env.PORT || 8080;
 
 const search = require('./search');
 
+
 app.use(express.static(staticPath));
 
 app.get('/', (req, res) => {

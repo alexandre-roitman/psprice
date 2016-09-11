@@ -4,7 +4,4 @@ node_modules/
 *.iml
 npm-debug.log
 
-./config.js
-./psdb.json
-
 public/bundle.js

@@ -1,9 +1,11 @@
+'use strict';
+
 let cachedPrices = {};
 
-let getPrice = require('priceCheck').getPrice;
+let getPrice = require('./priceCheck').getPrice;
 
 module.exports = (gameId) => {
-    return new Promise((resolve, reject) {
+    return new Promise((resolve) => {
         if (cachedPrices[gameId]) {
             resolve(cachedPrices[gameId]);
         }
