@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack && node index.js"
+    "start": "webpack && node index.js",
+    "client-dev": "webpack-dev-server --progress --colors --hot --config ./webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -35,7 +36,9 @@
     "lodash": "^4.15.0",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
+    "react-hot-loader": "^1.3.0",
     "request": "^2.74.0",
-    "webpack": "^1.13.2"
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.1"
   }
 }

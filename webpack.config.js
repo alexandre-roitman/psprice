@@ -1,30 +1,28 @@
-const webpack = require('webpack');
-const path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'inline-source-map',
-
   entry: [
+    'webpack-dev-server/client?http://localhost:8080',
+    'webpack/hot/only-dev-server',
     './src/index.js'
   ],
-
-  output: {
-    filename: 'bundle.js',
-    path: path.join(__dirname, '/public'),
-    publicPath: '/public'
-  },
-
   module: {
-    loaders: [
-      {test: /\.jsx?$/, exclude: /node_modules/, loader: 'babel'}
-    ]
+    loaders: [{
+      test: /\.jsx?$/,
+      exclude: /node_modules/,
+      loader: 'react-hot!babel'
+    }]
   },
-
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
-
-  plugins: [
-    new webpack.NoErrorsPlugin()
-  ]
+  output: {
+    path: __dirname + '/public',
+    publicPath: '/',
+    filename: 'bundle.js'
+  },
+  devServer: {
+    contentBase: './public',
+    hot: true
+  }
 };
